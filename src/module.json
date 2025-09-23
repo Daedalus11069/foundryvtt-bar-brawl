@@ -9,7 +9,7 @@
             "discord": "dj_addi"
         }
     ],
-    "version": "1.8.8",
+    "version": "1.8.10",
     "compatibility": {"minimum": "12.324", "verified": "12.327"},
     "esmodules": ["barbrawl.js"],
     "styles": ["styles/attributeHud.css"],
@@ -51,13 +51,13 @@
             "flags": {}
         }
     ],
-    "url": "https://gitlab.com/woodentavern/foundryvtt-bar-brawl",
-    "manifest": "https://gitlab.com/woodentavern/foundryvtt-bar-brawl/-/raw/master/src/module.json",
-    "download": "https://gitlab.com/api/v4/projects/22486994/packages/generic/barbrawl/1.8.8/barbrawl-v1.8.8.zip",
-    "license": "https://gitlab.com/woodentavern/foundryvtt-bar-brawl/-/blob/master/LICENSE",
-    "readme": "https://gitlab.com/woodentavern/foundryvtt-bar-brawl/-/blob/master/README.md",
-    "bugs": "https://gitlab.com/woodentavern/foundryvtt-bar-brawl/-/issues",
-    "changelog": "https://gitlab.com/woodentavern/foundryvtt-bar-brawl/-/blob/master/CHANGELOG.md",
+    "url": "https://github.com/Daedalus11069/foundryvtt-bar-brawl",
+    "manifest": "https://github.com/Daedalus11069/foundryvtt-bar-brawl/releases/latest/download/module.json",
+    "download": "https://github.com/Daedalus11069/foundryvtt-bar-brawl/releases/download/v1.8.10/module.zip",
+    "license": "https://github.com/Daedalus11069/foundryvtt-bar-brawl/blob/main/LICENSE",
+    "readme": "https://github.com/Daedalus11069/foundryvtt-bar-brawl/blob/main/README.md",
+    "bugs": "https://github.com/Daedalus11069/foundryvtt-bar-brawl/issues",
+    "changelog": "https://github.com/Daedalus11069/foundryvtt-bar-brawl/blob/main/CHANGELOG.md",
     "flags": {
         "hotReload": {
             "extensions": ["css", "hbs", "json"],

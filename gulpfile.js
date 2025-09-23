@@ -160,26 +160,24 @@ async function packageBuild() {
 			fs.ensureDirSync('package');
 
 			// Initialize the zip file
-            const zipName = `${manifest.file.id}-v${manifest.file.version}.zip`;
-			const zipFile = fs.createWriteStream(path.join('package', zipName));
-			const zip = archiver('zip', { zlib: { level: 9 } });
+      const zipName = `module.zip`;
+      const zipFile = fs.createWriteStream(path.join("package", zipName));
+      const zip = archiver("zip", { zlib: { level: 9 } });
 
-			zipFile.on('close', () => {
-				console.log(chalk.green(zip.pointer() + ' total bytes'));
-				console.log(
-					chalk.green(`Zip file ${zipName} has been written`)
-				);
-				return resolve();
-			});
+      zipFile.on("close", () => {
+        console.log(chalk.green(zip.pointer() + " total bytes"));
+        console.log(chalk.green(`Zip file ${zipName} has been written`));
+        return resolve();
+      });
 
-			zip.on('error', (err) => {
-				throw err;
-			});
+      zip.on("error", err => {
+        throw err;
+      });
 
-			zip.pipe(zipFile);
+      zip.pipe(zipFile);
 
-			// Add the directory with the final code
-            zip.directory('src/', manifest.file.id);
+      // Add the directory with the final code
+      zip.directory("src/", manifest.file.id);
 
 			zip.finalize();
 		} catch (err) {
