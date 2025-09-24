@@ -456,7 +456,7 @@ function rgb2hsv(r, g, b) {
  */
 function getBitmapResolution() {
     const baseResolution = canvas.app.renderer.resolution;
-    if (canvas.performance.mode >= CONST.CANVAS_PERFORMANCE_MODES.MAX) return baseResolution * 2;
+    if (canvas.performance.mode >= CONST.CANVAS_PERFORMANCE_MODES.HIGH) return baseResolution * 2.5;
     if (canvas.performance.mode >= CONST.CANVAS_PERFORMANCE_MODES.MED) return baseResolution * 1.5;
     return baseResolution;
 }
