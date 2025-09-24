@@ -17,6 +17,15 @@ jobs:
         id: get_version
         uses: battila7/get-version-action@v2
 
+      # Substitute the Manifest and Download URLs in the module.json
+      - name: Substitute Correct Version in manifest file
+        id: sub_version
+        uses: microsoft/variable-substitution@v1
+        with:
+          files: "src/module.json"
+        env:
+          version: ${{steps.get_version.outputs.version-without-v}}
+
       - name: Run package step
         uses: actions/setup-node@v4
         with:
